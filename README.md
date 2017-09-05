@@ -29,3 +29,9 @@ pip install -r requirements.txt
 ```sh
 python app.py 
 ```
+
+```py
+def main(args):
+  pass
+```
+
