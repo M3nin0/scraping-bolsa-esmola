@@ -30,8 +30,3 @@ pip install -r requirements.txt
 python app.py 
 ```
 
-```py
-def main(args):
-  pass
-```
-
