@@ -1,6 +1,6 @@
 # scraping-bolsa-esmola
 
-Um Scrapper desenvolvido em Python que busca os dados dos gastos do governo brasileiro com o programa Bolsa Família, incluindo a quantidade de pessoas e total de gastos de cada um.
+Um Scrapper desenvolvido em Python que busca os dados dos gastos do governo brasileiro com o programa Bolsa Família, com dados de 2004 a 2017. Além disso lista os estados que mais gastaram em cada um dos anos.
 
 ## Instalando as Dependências
 
@@ -27,6 +27,6 @@ pip install -r requirements.txt
 >No diretório raíz execute:
 
 ```sh
-python app.py 
+python main.py 
 ```
 
