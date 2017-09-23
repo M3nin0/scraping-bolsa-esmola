@@ -54,12 +54,3 @@ http://www.portaldatransparencia.gov.br/PortalTransparenciaPesquisaAcaoMunicipio
 
 
 http://www.portaldatransparencia.gov.br/PortalTransparenciaPesquisaAcaoMunicipio.asp?Exercicio=2017&textoPesquisaAcao=&codigoAcao=8442&codigoFuncao=08&siglaEstado=AC
-
-
-
- Gurl = 'http://www.portaldatransparencia.gov.br/PortalTransparenciaPesquisaAcaoMunicipio.asp?Exercicio=2017&textoPesquisaAcao=&codigoAcao=8442&codigoFuncao=08&siglaEstado=AC'
-
-    Gurl = Gurl[0:95] + str(ano) + Gurl[99:130] + codigo + Gurl[135:]
-
-
-

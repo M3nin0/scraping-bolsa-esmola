@@ -52,15 +52,15 @@ escolha = input("Escolha uma opção?\n" \
 if(escolha == '1'):
     print('Os estados que mais gastaram em ' + str(ano) + ' foram:\n')
     sleep(2)
-    mostraEstados(pagina, valores, cidades, url, exibe)
+    mostraEstados(pagina, valores, cidades, url, exibe, 0)
 
 elif(escolha == '2'):
     print('Os municipios que mais gastaram em ' + str(ano) + ' foram:\n')
     sleep(2)
-    mostraMunicipio(estados, exibe, ano, codigo)
+    mostraMunicipio(estados, exibe, ano, codigo, 0)
 
 elif(escolha == '3'):
     print('Abaixo, valores de todos os gastos de estados e municipios em ' + str(ano) + '\n')
     sleep(3)
-    mostraEstados(pagina, valores, cidades, url, exibe)
-    mostraMunicipio(estados, 1, ano, codigo)
+    mostraEstados(pagina, valores, cidades, url, exibe, 0)
+    mostraMunicipio(estados, 1, ano, codigo, 0)

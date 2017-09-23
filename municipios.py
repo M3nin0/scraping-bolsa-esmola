@@ -1,8 +1,8 @@
 from functions import *
 
-def mostraMunicipio(estados, exibe, ano, codigo):
+def mostraMunicipio(estados, exibe, ano, codigo, api):
 
-    #print(estados)
+    municipios = []
 
     Gurl = 'http://www.portaldatransparencia.gov.br/PortalTransparenciaPesquisaAcaoMunicipio.asp?Exercicio=2017&textoPesquisaAcao=&codigoAcao=8442&codigoFuncao=08&siglaEstado=AC'
     
@@ -24,7 +24,10 @@ def mostraMunicipio(estados, exibe, ano, codigo):
         cidades = setCidades(obj)
         
         verificaValor(valores, cidades, 'municipio', exibe)
-        getMaiorMunicipio(exibe)
+        if(api == 0):
+            getMaiorMunicipio(exibe)
+        else:
+            municipios.append(returnMaiorMunicio())
 
         while(index < len(estados) - 1):
 
@@ -38,7 +41,10 @@ def mostraMunicipio(estados, exibe, ano, codigo):
                 cidades = setCidades(obj)
 
                 verificaValor(valores, cidades, 'municipio', exibe)
-                getMaiorMunicipio(exibe)
+                if(api == 0):
+                    getMaiorMunicipio(exibe)
+                else:
+                    municipios.append(returnMaiorMunicio())
 
                 url += '&Pagina=' + str(cont)
 
@@ -48,7 +54,10 @@ def mostraMunicipio(estados, exibe, ano, codigo):
                 cidades = setCidades(obj)
 
                 verificaValor(valores, cidades, 'municipio', exibe)
-                getMaiorMunicipio(exibe)
+                if(api == 0):
+                    getMaiorMunicipio(exibe)
+                else:
+                    municipios.append(returnMaiorMunicio())
     
                 if(cont <= getNumeroPagina(pagina)):
 
@@ -59,4 +68,9 @@ def mostraMunicipio(estados, exibe, ano, codigo):
    
     else:
         verificaValor(valores, cidades, 'municipio', exibe)
-        getMaiorMunicipio(exibe)
+        if(api == 0):
+            getMaiorMunicipio(exibe)
+        else:
+            municipios.append(returnMaiorMunicio())
+
+    return municipios

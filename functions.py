@@ -130,6 +130,21 @@ def getMaiorEstado(exibe):
 
     estado = {}
 
+# Retorna dicionário com estados que mais gastaram
+def returnMaiorEstado():
+    
+    global estado
+
+    final = {}
+
+    maiores = sorted(estado, reverse = True)[:3]
+
+    for i in range(0, 3):
+        final[estado[maiores[i]]] = str(maiores[i])
+
+    estado = {}
+    return final
+
 #Retorna o municipio que mais gastou
 def getMaiorMunicipio(exibe):
 
@@ -142,4 +157,17 @@ def getMaiorMunicipio(exibe):
             print('Nome: ' + municipio[maiores[i]] + '\nValor gasto: ' + str(maiores[i]))
 
     municipio = {}
-    
+
+# Retorna o dicionário com os municípios que mais gastaram
+def returnMaiorMunicio():
+
+    global municipio
+    final = {}
+
+    maiores = sorted(municipio, reverse = True)[:3]
+
+    for i in range(0, 2):
+        final[municipio[maiores[i]]] = str(maiores[i])
+
+    municipio = {}
+    return final
